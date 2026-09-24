@@ -1,5 +1,6 @@
 import type { IconType } from "react-icons";
 import { Code2 } from "lucide-react";
+
 import {
   SiHtml5,
   SiCss,
@@ -15,7 +16,6 @@ import {
   SiJsonwebtokens,
   SiGit,
   SiGithub,
-  SiVisualstudiocode,
   SiDocker,
   SiPnpm,
   SiTurborepo,
@@ -23,6 +23,8 @@ import {
   SiFirebase,
   SiGoogleanalytics,
 } from "react-icons/si";
+
+import { VscVscode } from "react-icons/vsc";
 
 const map: Record<string, IconType> = {
   HTML: SiHtml5,
@@ -39,7 +41,7 @@ const map: Record<string, IconType> = {
   JWT: SiJsonwebtokens,
   Git: SiGit,
   GitHub: SiGithub,
-  "VS Code": SiVisualstudiocode,
+  "VS Code": VscVscode,
   Docker: SiDocker,
   PNPM: SiPnpm,
   Turborepo: SiTurborepo,
