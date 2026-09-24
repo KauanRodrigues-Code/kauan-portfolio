@@ -2,7 +2,7 @@ import type { IconType } from "react-icons";
 import { Code2 } from "lucide-react";
 import {
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiJavascript,
   SiReact,
   SiNextdotjs,
@@ -26,7 +26,7 @@ import {
 
 const map: Record<string, IconType> = {
   HTML: SiHtml5,
-  CSS: SiCss3,
+  CSS: SiCss,
   JavaScript: SiJavascript,
   React: SiReact,
   "Next.js": SiNextdotjs,
@@ -48,8 +48,18 @@ const map: Record<string, IconType> = {
   "Google Analytics": SiGoogleanalytics,
 };
 
-export function TechIcon({ name, size = 18 }: { name: string; size?: number }) {
+export function TechIcon({
+  name,
+  size = 18,
+}: {
+  name: string;
+  size?: number;
+}) {
   const Icon = map[name];
-  if (!Icon) return <Code2 size={size} strokeWidth={1.75} />;
+
+  if (!Icon) {
+    return <Code2 size={size} strokeWidth={1.75} />;
+  }
+
   return <Icon size={size} />;
 }
