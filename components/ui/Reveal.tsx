@@ -18,6 +18,7 @@ export default function Reveal({
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -25,19 +26,28 @@ export default function Reveal({
           observer.disconnect();
         }
       },
-      { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
+      {
+        threshold: 0.15,
+        rootMargin: "0px 0px -60px 0px",
+      }
     );
+
     observer.observe(node);
+
     return () => observer.disconnect();
   }, []);
 
   return (
     <div
       ref={ref}
-      style={{ transitionDelay: visible ? `${delay}ms` : "0ms" }}
+      style={{
+        transitionDelay: visible ? `${delay}ms` : "0ms",
+      }}
       className={cn(
-        "transition-all duration-700 ease-out motion-reduce:transition-none",
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4",
+        "transition-all duration-300 ease-out sm:duration-700 motion-reduce:transition-none",
+        visible
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-4",
         className
       )}
     >
