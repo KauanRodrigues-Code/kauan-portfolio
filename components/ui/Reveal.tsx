@@ -14,6 +14,22 @@ export default function Reveal({
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 639px)");
+
+    const updateMobile = () => {
+      setIsMobile(mediaQuery.matches);
+    };
+
+    updateMobile();
+    mediaQuery.addEventListener("change", updateMobile);
+
+    return () => {
+      mediaQuery.removeEventListener("change", updateMobile);
+    };
+  }, []);
 
   useEffect(() => {
     const node = ref.current;
@@ -41,13 +57,13 @@ export default function Reveal({
     <div
       ref={ref}
       style={{
-        transitionDelay: visible ? `${delay}ms` : "0ms",
+        transitionDelay: isMobile && visible ? "0ms" : `${delay}ms`,
       }}
       className={cn(
-        "transition-all duration-300 ease-out sm:duration-700 motion-reduce:transition-none",
+        "transition-all duration-150 ease-out sm:duration-700 motion-reduce:transition-none",
         visible
           ? "opacity-100 translate-y-0"
-          : "opacity-0 translate-y-4",
+          : "opacity-0 translate-y-2 sm:translate-y-4",
         className
       )}
     >
