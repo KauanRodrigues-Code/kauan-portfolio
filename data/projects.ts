@@ -18,7 +18,7 @@ export const projects: Project[] = [
     description:
       "Website desenvolvido para a LC Burgers, com foco em presença digital, apresentação da marca e facilidade de contato com os clientes.",
     url: "https://lcburges.com.br",
-    logo: "/images/lc-burgers-logo.jpg",
+    logo: "/imagens/lc-burgers-logo.jpg",
     status: "live",
   },
   {
@@ -28,7 +28,7 @@ export const projects: Project[] = [
     description:
       "Website desenvolvido para a Team Peixoto, com foco em apresentação profissional, identidade visual e experiência do usuário.",
     url: "https://www.teampeixoto.com.br",
-    logo: "/images/team-peixoto-logo.png",
+    logo: "/imagens/team-peixoto-logo.png",
     status: "live",
   },
 ];

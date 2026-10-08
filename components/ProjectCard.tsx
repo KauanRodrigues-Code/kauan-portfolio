@@ -5,14 +5,15 @@ import type { Project } from "@/data/projects";
 export default function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="group relative overflow-hidden rounded-xl border border-surface-line bg-surface transition-colors hover:border-accent-bright/50">
-      <div className="flex aspect-[16/10] items-center justify-center border-b border-surface-line bg-gradient-to-br from-surface-raised to-bg p-8">
+      <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden border-b border-surface-line bg-gradient-to-br from-surface-raised to-bg p-0">
         {project.logo ? (
           <Image
             src={project.logo}
             alt={`Logo ${project.name}`}
-            width={320}
-            height={200}
-            className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+            width={600}
+            height={400}
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
         ) : (
           <Globe
