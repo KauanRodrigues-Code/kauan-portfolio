@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -72,8 +73,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={`${display.variable} ${sans.variable} ${mono.variable}`}>
-      <body className="font-sans bg-bg text-ink antialiased">{children}</body>
+    <html
+      lang="pt-BR"
+      className={`${display.variable} ${sans.variable} ${mono.variable}`}
+    >
+      <body className="font-sans bg-bg text-ink antialiased">
+        {children}
+
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XPNZD1YCKP"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XPNZD1YCKP');
+          `}
+        </Script>
+      </body>
     </html>
   );
 }
