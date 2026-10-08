@@ -24,7 +24,7 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
-const siteUrl = "https://kauanrodrigues.dev";
+const siteUrl = "https://kauanrodrigues.dev.br";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
