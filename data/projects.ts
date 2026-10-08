@@ -4,6 +4,7 @@ export type Project = {
   category: string;
   description: string;
   url?: string;
+  logo?: string;
   status: "live" | "building";
   tech?: string[];
   features?: string[];
@@ -17,6 +18,7 @@ export const projects: Project[] = [
     description:
       "Website desenvolvido para a LC Burgers, com foco em presença digital, apresentação da marca e facilidade de contato com os clientes.",
     url: "https://lcburges.com.br",
+    logo: "/images/lc-burgers-logo.jpg",
     status: "live",
   },
   {
@@ -25,7 +27,8 @@ export const projects: Project[] = [
     category: "Website / Landing Page",
     description:
       "Website desenvolvido para a Team Peixoto, com foco em apresentação profissional, identidade visual e experiência do usuário.",
-    url: "https://team-peixoto-site.vercel.app",
+    url: "https://www.teampeixoto.com.br",
+    logo: "/images/team-peixoto-logo.png",
     status: "live",
   },
 ];
@@ -37,7 +40,15 @@ export const proServ: Project = {
   description:
     "Estou iniciando o desenvolvimento do ProServ, uma plataforma criada para conectar clientes a profissionais de serviços.",
   status: "building",
-  tech: ["Next.js", "React", "TypeScript", "NestJS", "PostgreSQL", "Prisma", "Docker"],
+  tech: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "NestJS",
+    "PostgreSQL",
+    "Prisma",
+    "Docker",
+  ],
   features: [
     "Cadastro de clientes",
     "Cadastro de profissionais",
