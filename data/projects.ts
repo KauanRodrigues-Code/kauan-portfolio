@@ -1,3 +1,4 @@
+
 export type Project = {
   slug: string;
   name: string;
@@ -12,24 +13,35 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "lc-burgers",
-    name: "LC Burgers",
-    category: "Landing Page / Website",
-    description:
-      "Website desenvolvido para a LC Burgers, com foco em presença digital, apresentação da marca e facilidade de contato com os clientes.",
-    url: "https://lcburges.com.br",
-    logo: "/imagens/lc-burgers-logo.jpg",
-    status: "live",
-  },
-  {
     slug: "team-peixoto",
     name: "Team Peixoto",
     category: "Website / Landing Page",
     description:
       "Website desenvolvido para a Team Peixoto, com foco em apresentação profissional, identidade visual e experiência do usuário.",
     url: "https://www.teampeixoto.com.br",
-    logo: "/imagens/team-peixoto-logo.png",
+    logo: "/images/team-peixoto-logo.png",
     status: "live",
+  },
+  {
+    slug: "adega-do-japa",
+    name: "Adega do Japa",
+    category: "Landing Page / Website",
+    description:
+      "Website desenvolvido para a Adega do Japa, com cardápio digital, apresentação de produtos, vídeos, divulgação de eventos e integração com WhatsApp.",
+    url: "https://www.adegadojapa.net.br",
+    logo: "/images/adega-do-japa-logo.png",
+    status: "live",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    features: [
+      "Cardápio digital com produtos e preços",
+      "Apresentação de produtos",
+      "Seção de vídeos",
+      "Divulgação de eventos",
+      "Integração com WhatsApp",
+      "SEO",
+      "Google Analytics",
+      "Layout responsivo",
+    ],
   },
 ];
 
