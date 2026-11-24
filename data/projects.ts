@@ -19,7 +19,7 @@ export const projects: Project[] = [
     description:
       "Website desenvolvido para a Team Peixoto, com foco em apresentação profissional, identidade visual e experiência do usuário.",
     url: "https://www.teampeixoto.com.br",
-    logo: "/images/team-peixoto-logo.png",
+    logo: "/public/imagens/team-peixoto-logo.png",
     status: "live",
   },
   {
@@ -29,7 +29,7 @@ export const projects: Project[] = [
     description:
       "Website desenvolvido para a Adega do Japa, com cardápio digital, apresentação de produtos, vídeos, divulgação de eventos e integração com WhatsApp.",
     url: "https://www.adegadojapa.net.br",
-    logo: "/images/adega-do-japa-logo.png",
+    logo: "/public/imagens/adega-do-japa-logo.png",
     status: "live",
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     features: [
